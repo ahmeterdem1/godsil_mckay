@@ -21,13 +21,13 @@ that is cospectral to the initial one, although not necessarily isomorphic.
 
 The given graph is partitioned into sets 
 
-$$π\:=\:(C_1, C_2, \ldots C_k, D)$$ 
+$$π=(C_1, C_2, \ldots C_k, D)$$ 
 
 such that (1) any two vertices in $C_i$ have the same number of neighbours in $C_j$ 
 and (2) $v \in D$ has either 0, $|C_i|/2$, or $|C_i|$ neighbours in $C_i$ for all $i$.
 
 Such a partition will provide a basis for the switch. In the implementation given in this
-repository, we search possible partitions of $π\:=\:(C, D)$, i.e. with only one set $C$.
+repository, we search possible partitions of $π=(C, D)$, i.e. with only one set $C$.
 This choice relaxes the need to satisfy condition (1) above. However, the subgraph defined
 by $C$ must be regular, i.e. all vertices in $C$ must have the same degree.
 
