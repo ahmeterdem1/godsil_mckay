@@ -5,6 +5,7 @@ This repository contains a simple implementation of the [Godsil-McKay switch](ht
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 [github](https://github.com/ahmeterdem1/godsil_mckay)
+[pypi](https://pypi.org/project/gmswitch/)
 
 ## Graph Spectra
 
@@ -54,26 +55,26 @@ and blue nodes are the set of C. Notice that each green node either has no conne
 or is connected to half of the blue nodes, or could also be connected to all blue nodes. Also, subgraph
 induced by $C$ (blue nodes) is a regular graph.
 
-![partition1](images/partition1.png)
+![partition1](https://raw.githubusercontent.com/ahmeterdem1/godsil_mckay/refs/heads/main/images/partition1.png)
 
 Below is the graph after performing the Godsil-McKay switch on the above graph. The edges of node 4,
 has been switched, so that now it connects to the other half of blue nodes. All other connections remain.
 It can be verified in polynomial time that the graphs here before and after the switch are cospectral.
 
-![switch1](images/switch1.png)
+![switch1](https://raw.githubusercontent.com/ahmeterdem1/godsil_mckay/refs/heads/main/images/switch1.png)
 
 Before switch
 
-![partition2](images/partition2.png)
+![partition2](https://raw.githubusercontent.com/ahmeterdem1/godsil_mckay/refs/heads/main/images/partition2.png)
 
 After switch
 
-![switch2](images/switch2.png)
+![switch2](https://raw.githubusercontent.com/ahmeterdem1/godsil_mckay/refs/heads/main/images/switch2.png)
 
 Before switch
 
-![partition3](images/partition3.png)
+![partition3](https://raw.githubusercontent.com/ahmeterdem1/godsil_mckay/refs/heads/main/images/partition3.png)
 
 After switch
 
-![switch3](images/switch3.png)
+![switch3](https://raw.githubusercontent.com/ahmeterdem1/godsil_mckay/refs/heads/main/images/switch3.png)

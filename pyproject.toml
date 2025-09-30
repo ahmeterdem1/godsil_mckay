@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "gmswitch"
-version = "1.0.0"
+version = "1.0.1"
 description = "A library that performs Godsil-McKay switching on graphs."
 authors = ["Ahmet Erdem <ahmetblk1035@gmail.com>"]
 license = "MIT"
