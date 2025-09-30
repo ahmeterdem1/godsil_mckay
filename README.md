@@ -2,6 +2,10 @@
 
 This repository contains a simple implementation of the [Godsil-McKay switch](https://link.springer.com/article/10.1007/BF02189621).
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+[github](https://github.com/ahmeterdem1/godsil_mckay)
+
 ## Graph Spectra
 
 Graph spectrum is the set of eigenvalues of the adjacency matrix of a graph. This set can be

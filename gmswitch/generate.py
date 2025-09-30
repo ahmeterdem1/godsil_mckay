@@ -1,8 +1,6 @@
 import networkx as nx
 import random
-from tqdm import tqdm
 import numpy as np
-import pickle
 from .measures import adjacency_spectrum, are_cospectral
 
 def generate_non_cospectral_graphs(num_graphs, n, p, max_tries: int = 100, directed: bool = True) -> list:

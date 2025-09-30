@@ -1,4 +1,3 @@
-import numpy as np
 import networkx as nx
 from itertools import combinations
 import random
@@ -48,6 +47,16 @@ def simple_partition(G: nx.Graph, n: int = 1, trivial: bool = False):
         return C, D
     return None, None
 
+def get_partitions(G: nx.Graph, trivial: bool = False) -> list:
+    N = G.number_of_nodes()
+    partitions = []
+    for n in range(1, N // 2 + 1):
+        C, D = simple_partition(G, n=n, trivial=trivial)
+        if C is not None:
+            partitions.append((C, D))
+    return partitions
+
+
 def godsil_mckay_switch(G: nx.Graph, C, D) -> nx.Graph:
     """
     Perform Godsil-McKay switching on graph G.
@@ -75,4 +84,5 @@ def godsil_mckay_switch(G: nx.Graph, C, D) -> nx.Graph:
                 H.add_edge(d, c)
 
     return H
+
 
