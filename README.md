@@ -48,6 +48,32 @@ In the repository, we have also provided a dataset of graph that are all not cos
 They can be used as input to the Godsil-McKay switch implementation to generate cospectral graphs, which
 would also be not cospectral to the rest of the dataset.
 
+## Example Usage
+
+```python
+
+from gmswitch.switch import simple_partition, godsil_mckay_switch
+from gmswitch.measures import are_cospectral, adjacency_spectrum
+import networkx as nx
+
+G = nx.erdos_renyi_graph(10, 0.5)
+C, D = None, None
+
+for n in range(3, 7):
+    C, D = simple_partition(G, n)  # try to find a (C, D) partition with |C|=n or n+1, whichever is even
+    if C is not None:  # C and D is returned as None, if such a partition is impossible
+        break
+
+if C is not None:
+    print("Found a valid (C, D) partition")
+    G_switched = godsil_mckay_switch(G, C, D)  # Perform GM switch
+    print("Are the original and switched graphs cospectral?", are_cospectral(G, G_switched))
+    print("Original graph spectrum:", adjacency_spectrum(G))
+    print("Switched graph spectrum:", adjacency_spectrum(G_switched))
+else:
+    print("No valid (C, D) partition found")
+```
+
 ## Examples
 
 Below is a valid $(C, D)$ partition for the plotted graph, where green nodes are the set of D
